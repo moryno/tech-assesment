@@ -25,7 +25,8 @@ const Container = styled.main`
   display: flex;
   background-color: #f6f2ff;
   align-items: center;
-  padding: 60px 160px;
+  justify-content: center;
+  padding: 60px 100px;
   box-sizing: border-box;
   ${mobile({
     width: "100vw",

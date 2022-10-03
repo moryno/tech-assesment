@@ -61,13 +61,13 @@ const Card = () => {
 export default Card;
 
 const Container = styled.main`
-  width: 50%;
+  width: 80%;
   background-color: #f6f2ff;
   border: none;
   border-radius: 2.21875rem;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
   ${mobile({
-    width: "70%",
+    width: "60%",
     borderRadius: "0.7rem",
     position: "absolute",
     top: "25%",
@@ -114,7 +114,7 @@ const ResponseContainer = styled.article`
   margin-top: 2rem;
   display: flex;
   align-items: center;
-
+  position: relative;
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
@@ -157,10 +157,12 @@ const Button = styled.button`
   border-radius: 0.6rem;
   padding: 0.7rem 1rem;
   font-weight: 700;
+  position: absolute;
+  right: 3%;
   cursor: pointer;
   background-color: #8456ec;
   color: #ede5ff;
-  ${mobile({ padding: "0.2rem" })};
+  ${mobile({ padding: "0.2rem", position: "relative" })};
 `;
 
 const ScheduleContainer = styled.article`
