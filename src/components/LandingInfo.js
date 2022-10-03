@@ -7,7 +7,7 @@ const LandingInfo = () => {
     <Container>
       <Wrapper>
         <Title>Imagine if</Title>
-        <Title>Scapchat</Title>
+        <TitleGradient>Snapchat</TitleGradient>
         <Title>had events</Title>
         <Description>
           Easily host and share events with your friends
@@ -38,10 +38,20 @@ const Wrapper = styled.article`
 const Title = styled.h1`
   font-size: 5rem;
   color: #240d57;
+
   align-self: flex-end;
   &:last-child {
     margin-bottom: 1.5rem;
   }
+`;
+
+const TitleGradient = styled.h1`
+  font-size: 5rem;
+
+  align-self: flex-end;
+  background: -webkit-linear-gradient(#8456ec, #e87bf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const Description = styled.p`
