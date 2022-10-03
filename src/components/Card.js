@@ -1,6 +1,7 @@
 import { CalendarToday, ChevronRight, Link, PinDrop } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Card = () => {
   return (
@@ -65,6 +66,12 @@ const Container = styled.main`
   border: none;
   border-radius: 2.21875rem;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  ${mobile({
+    width: "70%",
+    borderRadius: "0.7rem",
+    position: "absolute",
+    top: "25%",
+  })};
 `;
 
 const ImageContainer = styled.section`
@@ -75,6 +82,7 @@ const ImageContainer = styled.section`
   justify-content: center;
   margin-bottom: 1rem;
   overflow: hidden;
+  ${mobile({ height: "20vh", marginBottom: "0.5rem" })};
 `;
 
 const Image = styled.img`
@@ -83,6 +91,7 @@ const Image = styled.img`
   object-fit: cover;
   border-top-right-radius: 2.21875rem;
   border-top-left-radius: 2.21875rem;
+  ${mobile({ borderTopRightRadius: "0.7rem", borderTopLeftRadius: "0.7rem" })};
 `;
 
 const InfoContainer = styled.section`
@@ -92,11 +101,13 @@ const InfoContainer = styled.section`
 const Title = styled.h1`
   color: #240d57;
   font-size: 2rem;
+  ${mobile({ fontSize: "1.2rem" })};
 `;
 
 const HostDescription = styled.span`
   color: #828282;
   font-weight: 500;
+  ${mobile({ fontSize: "0.8rem" })};
 `;
 
 const ResponseContainer = styled.article`
@@ -111,12 +122,20 @@ const ResponseContainer = styled.article`
   background-color: #fff;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
+  ${mobile({
+    marginBottom: "0.5rem",
+    marginTop: "0.5rem",
+    padding: "0.4rem",
+
+    justifyContent: "space-between",
+  })};
 `;
 
 const Responses = styled.span`
   color: #240d57;
   font-size: 1.2rem;
   margin-right: 0.5rem;
+  ${mobile({ fontSize: "1rem", marginRight: "0" })};
 `;
 const Dot = styled.div`
   width: 2px;
@@ -124,28 +143,28 @@ const Dot = styled.div`
   border-radius: 50%;
   background-color: black;
   margin-right: 0.5rem;
+  ${mobile({ marginRight: "0" })};
 `;
 
 const Guests = styled.span`
   color: #501fc1;
   margin-right: 3.5rem;
+  ${mobile({ marginRight: "0" })};
 `;
 
 const Button = styled.button`
   border: none;
   border-radius: 0.6rem;
-
   padding: 0.7rem 1rem;
   font-weight: 700;
-
   cursor: pointer;
   background-color: #8456ec;
   color: #ede5ff;
+  ${mobile({ padding: "0.2rem" })};
 `;
 
 const ScheduleContainer = styled.article`
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -153,20 +172,26 @@ const ScheduleContainer = styled.article`
 `;
 
 const IconWrapper = styled.div`
+  flex: 0.5;
   width: 3.5rem;
   height: 3.5rem;
   display: flex;
   border-radius: 0.5rem;
-  background-color: #fff;
+  background-color: transparent;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
   align-items: center;
+  margin-right: 1rem;
   justify-content: center;
+  ${mobile({
+    width: "20px",
+    height: "20px",
+  })};
 `;
 
 const ScheduleTitleWrapper = styled.div`
+  flex: 3;
   display: flex;
-
-  align-items: center;
+  align-items: left;
   flex-direction: column;
 `;
 
@@ -175,11 +200,13 @@ const BoldScheduleTitle = styled.p`
   font-size: 1.3rem;
   font-weight: bold;
   align-self: flex-start;
+  ${mobile({ fontSize: "1rem" })};
 `;
 
 const ScheduleTitle = styled.span`
   color: #4f4f4f;
   font-size: 1.1rem;
+  ${mobile({ fontSize: "0.8rem" })};
 `;
 
 const Span = styled.strong``;

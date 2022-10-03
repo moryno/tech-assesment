@@ -1,12 +1,7 @@
-import {
-  ArrowRightSharp,
-  CalendarToday,
-  CalendarViewDay,
-  ChevronRight,
-  PinDrop,
-} from "@material-ui/icons";
+import { CalendarToday, ChevronRight, PinDrop } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Event = () => {
   return (
@@ -33,7 +28,7 @@ const Event = () => {
             </IconWrapper>
             <ScheduleTitleWrapper>
               <BoldScheduleTitle>Street name</BoldScheduleTitle>
-              <ScheduleTitle>301 Rowes Lane, WA, 7183</ScheduleTitle>
+              <ScheduleTitle>Suburb, State, Postcode</ScheduleTitle>
             </ScheduleTitleWrapper>
             <ChevronRight />
           </ScheduleContainer>
@@ -54,24 +49,31 @@ const Event = () => {
 export default Event;
 
 const Container = styled.main`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #f6f2ff;
   padding: 60px 100px;
   box-sizing: border-box;
+  ${mobile({ width: "100vw", height: "100vh", padding: "0rem" })};
 `;
 
 const Wrapper = styled.section`
   display: flex;
+  ${mobile({
+    width: "100%",
+    flexDirection: "column-reverse",
+  })};
 `;
 
 const Left = styled.section`
   flex: 1;
+  ${mobile({ width: "100%" })};
 `;
 
 const Right = styled.section`
   flex: 1;
   height: 100%;
+  ${mobile({ width: "100%" })};
 `;
 
 const ImageContainer = styled.section`
@@ -86,23 +88,26 @@ const ImageContainer = styled.section`
 
 const Image = styled.img`
   width: 60%;
-  height: 60vh;
+  height: 40vh;
   object-fit: cover;
+  ${mobile({ width: "100%" })};
 `;
 
 const Title = styled.h1`
   color: #240d57;
   font-size: 3rem;
+  ${mobile({ fontSize: "1.5rem" })};
 `;
 
 const Host = styled.span`
   color: #828282;
   font-weight: 500;
   font-size: 1.2rem;
+  ${mobile({ fontSize: "0.8rem" })};
 `;
 
 const ScheduleContainer = styled.article`
-  width: 90%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,19 +117,27 @@ const ScheduleContainer = styled.article`
 `;
 
 const IconWrapper = styled.div`
+  flex: 0.5;
   width: 3.5rem;
   height: 3.5rem;
   display: flex;
+  color: #8456ec;
   border-radius: 0.5rem;
-  background-color: #fff;
+  background-color: #ffff;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
   align-items: center;
+  margin-right: 1rem;
   justify-content: center;
+  ${mobile({
+    width: "20px",
+    height: "20px",
+  })};
 `;
 
 const ScheduleTitleWrapper = styled.div`
+  flex: 3;
   display: flex;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
 `;
 
@@ -133,11 +146,13 @@ const BoldScheduleTitle = styled.p`
   font-size: 1.3rem;
   font-weight: bold;
   align-self: flex-start;
+  ${mobile({ fontSize: "1rem" })};
 `;
 
 const ScheduleTitle = styled.span`
   color: #4f4f4f;
   font-size: 1.1rem;
+  ${mobile({ fontSize: "1rem" })};
 `;
 
 const Span = styled.strong``;

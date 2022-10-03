@@ -1,19 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Create = () => {
+  const [events, setEvents] = useState([]);
+  const [inputs, setInputs] = useState({
+    eventName: "",
+    hostName: "",
+    start: "",
+    end: "",
+    location: "",
+    photo: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setInputs({ ...inputs, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setEvents([...events, inputs]);
+  };
+
   return (
     <Container>
       <Wrapper>
         <Title>Create Event</Title>
-        <Form>
-          <Input placeholder="Event name" name="eventName" />
-          <Input placeholder="Host name" type="hostname" />
-          <Input placeholder="Start time" type="start" />
-          <Input placeholder="End time/date" type="end" />
-          <Input placeholder="Location" type="location" />
-          <Input placeholder="Event photo" type="photo" />
+        <Form onSubmit={handleSubmit}>
+          <Input
+            placeholder="Event name"
+            onChange={handleChange}
+            name="eventName"
+          />
+          <Input
+            placeholder="Host name"
+            onChange={handleChange}
+            name="hostName"
+          />
+          <Input
+            placeholder="Start time"
+            onChange={handleChange}
+            name="start"
+          />
+          <Input
+            placeholder="End time/date"
+            onChange={handleChange}
+            name="end"
+          />
+          <Input
+            placeholder="Location"
+            onChange={handleChange}
+            name="location"
+          />
+          <Input
+            placeholder="Event photo"
+            onChange={handleChange}
+            name="photo"
+          />
           <Button>Create</Button>
         </Form>
         <NextButton>
@@ -39,6 +84,7 @@ const Wrapper = styled.section`
   width: 25%;
   padding: 20px;
   background-color: white;
+  ${mobile({ width: "75%" })};
 `;
 
 const Title = styled.h1`
