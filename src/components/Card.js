@@ -1,9 +1,4 @@
-import {
-  ArrowRightSharp,
-  CalendarToday,
-  Link,
-  PinDrop,
-} from "@material-ui/icons";
+import { CalendarToday, ChevronRight, Link, PinDrop } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 
@@ -18,11 +13,12 @@ const Card = () => {
       </ImageContainer>
       <InfoContainer>
         <Title>Movie night</Title>
-        <HostDescription> Hosted by Elysia</HostDescription>
+        <HostDescription>👋 Hosted by Elysia</HostDescription>
         <ResponseContainer>
           <Responses>14 responses</Responses>
+          <Dot />
           <Guests>see guests</Guests>
-          <InviteButton>Invite</InviteButton>
+          <Button>🤝 Invite</Button>
         </ResponseContainer>
         <ScheduleContainer>
           <IconWrapper>
@@ -34,17 +30,17 @@ const Card = () => {
               to <Span>19 August 1:00PM</Span> UTC +10
             </ScheduleTitle>
           </ScheduleTitleWrapper>
-          <ArrowRightSharp />
+          <ChevronRight />
         </ScheduleContainer>
         <ScheduleContainer>
           <IconWrapper>
             <PinDrop />
           </IconWrapper>
           <ScheduleTitleWrapper>
-            <BoldScheduleTitle>Stret name</BoldScheduleTitle>
+            <BoldScheduleTitle>Street name</BoldScheduleTitle>
             <ScheduleTitle>301 Rowes Lane, WA, 7183</ScheduleTitle>
           </ScheduleTitleWrapper>
-          <ArrowRightSharp />
+          <ChevronRight />
         </ScheduleContainer>
         <ScheduleContainer>
           <IconWrapper>
@@ -54,7 +50,7 @@ const Card = () => {
             <BoldScheduleTitle>Link</BoldScheduleTitle>
             <ScheduleTitle>netflix.com</ScheduleTitle>
           </ScheduleTitleWrapper>
-          <ArrowRightSharp />
+          <ChevronRight />
         </ScheduleContainer>
       </InfoContainer>
     </Container>
@@ -107,7 +103,7 @@ const ResponseContainer = styled.article`
   margin-top: 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
@@ -119,17 +115,29 @@ const ResponseContainer = styled.article`
 
 const Responses = styled.span`
   color: #240d57;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+`;
+const Dot = styled.div`
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: black;
+  margin-right: 0.5rem;
 `;
 
 const Guests = styled.span`
   color: #501fc1;
+  margin-right: 3.5rem;
 `;
 
-const InviteButton = styled.button`
+const Button = styled.button`
   border: none;
   border-radius: 0.6rem;
-  padding: 0.5rem 1rem;
+
+  padding: 0.7rem 1rem;
   font-weight: 700;
+
   cursor: pointer;
   background-color: #8456ec;
   color: #ede5ff;
@@ -157,7 +165,7 @@ const IconWrapper = styled.div`
 
 const ScheduleTitleWrapper = styled.div`
   display: flex;
-  justify-self: start;
+
   align-items: center;
   flex-direction: column;
 `;

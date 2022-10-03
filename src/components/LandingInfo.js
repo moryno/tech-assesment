@@ -14,7 +14,7 @@ const LandingInfo = () => {
         </Description>
         <Description>across any social media</Description>
         <Button>
-          <Link to={"/create"}>Create my event</Link>
+          <Link to={"/create"}>🎉Create my event</Link>
         </Button>
       </Wrapper>
     </Container>

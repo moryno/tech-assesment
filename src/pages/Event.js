@@ -2,6 +2,8 @@ import {
   ArrowRightSharp,
   CalendarToday,
   CalendarViewDay,
+  ChevronRight,
+  PinDrop,
 } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
@@ -23,19 +25,17 @@ const Event = () => {
                 to <Span>19 August 1:00PM</Span> UTC +10
               </ScheduleTitle>
             </ScheduleTitleWrapper>
-            <ArrowRightSharp />
+            <ChevronRight />
           </ScheduleContainer>
           <ScheduleContainer>
             <IconWrapper>
-              <CalendarToday />
+              <PinDrop />
             </IconWrapper>
             <ScheduleTitleWrapper>
-              <BoldScheduleTitle>18 August 6:00Pm</BoldScheduleTitle>
-              <ScheduleTitle>
-                to <Span>19 August 1:00PM</Span> UTC +10
-              </ScheduleTitle>
+              <BoldScheduleTitle>Street name</BoldScheduleTitle>
+              <ScheduleTitle>301 Rowes Lane, WA, 7183</ScheduleTitle>
             </ScheduleTitleWrapper>
-            <ArrowRightSharp />
+            <ChevronRight />
           </ScheduleContainer>
         </Left>
         <Right>
@@ -131,6 +131,7 @@ const ScheduleTitleWrapper = styled.div`
 const BoldScheduleTitle = styled.p`
   color: #240d57;
   font-size: 1.3rem;
+  font-weight: bold;
   align-self: flex-start;
 `;
 
