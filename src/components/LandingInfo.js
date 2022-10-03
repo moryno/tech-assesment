@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const LandingInfo = () => {
@@ -12,7 +13,9 @@ const LandingInfo = () => {
           Easily host and share events with your friends
         </Description>
         <Description>across any social media</Description>
-        <Button>Create my event</Button>
+        <Button>
+          <Link to={"/create"}>Create my event</Link>
+        </Button>
       </Wrapper>
     </Container>
   );
@@ -54,4 +57,5 @@ const Button = styled.button`
   font-size: 1.2rem;
   background-image: linear-gradient(to right, #8456ec, #e87bf8);
   margin-top: 2rem;
+  cursor: pointer;
 `;

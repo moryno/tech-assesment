@@ -24,7 +24,7 @@ const Container = styled.main`
   display: flex;
   background-color: #f6f2ff;
   align-items: center;
-
+  padding: 60px 160px;
   box-sizing: border-box;
 `;
 

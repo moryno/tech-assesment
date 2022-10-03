@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Create = () => {
@@ -15,7 +16,9 @@ const Create = () => {
           <Input placeholder="Event photo" type="photo" />
           <Button position="left">Create</Button>
         </Form>
-        <Button position="right">Next</Button>
+        <Button position="right">
+          <Link to="/event"> Next </Link>
+        </Button>
       </Wrapper>
     </Container>
   );

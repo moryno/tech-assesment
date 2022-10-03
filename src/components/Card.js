@@ -1,4 +1,9 @@
-import { ArrowRightSharp, CalendarToday } from "@material-ui/icons";
+import {
+  ArrowRightSharp,
+  CalendarToday,
+  Link,
+  PinDrop,
+} from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 
@@ -33,25 +38,21 @@ const Card = () => {
         </ScheduleContainer>
         <ScheduleContainer>
           <IconWrapper>
-            <CalendarToday />
+            <PinDrop />
           </IconWrapper>
           <ScheduleTitleWrapper>
-            <BoldScheduleTitle>18 August 6:00Pm</BoldScheduleTitle>
-            <ScheduleTitle>
-              to <Span>19 August 1:00PM</Span> UTC +10
-            </ScheduleTitle>
+            <BoldScheduleTitle>Stret name</BoldScheduleTitle>
+            <ScheduleTitle>301 Rowes Lane, WA, 7183</ScheduleTitle>
           </ScheduleTitleWrapper>
           <ArrowRightSharp />
         </ScheduleContainer>
         <ScheduleContainer>
           <IconWrapper>
-            <CalendarToday />
+            <Link />
           </IconWrapper>
           <ScheduleTitleWrapper>
-            <BoldScheduleTitle>18 August 6:00Pm</BoldScheduleTitle>
-            <ScheduleTitle>
-              to <Span>19 August 1:00PM</Span> UTC +10
-            </ScheduleTitle>
+            <BoldScheduleTitle>Link</BoldScheduleTitle>
+            <ScheduleTitle>netflix.com</ScheduleTitle>
           </ScheduleTitleWrapper>
           <ArrowRightSharp />
         </ScheduleContainer>
@@ -63,7 +64,7 @@ const Card = () => {
 export default Card;
 
 const Container = styled.main`
-  width: 45%;
+  width: 50%;
   background-color: #f6f2ff;
   border: none;
   border-radius: 2.21875rem;
@@ -72,7 +73,7 @@ const Container = styled.main`
 
 const ImageContainer = styled.section`
   width: 100%;
-  height: 30vh;
+  height: 40vh;
   display: flex;
   align-item: center;
   justify-content: center;
@@ -156,6 +157,7 @@ const IconWrapper = styled.div`
 
 const ScheduleTitleWrapper = styled.div`
   display: flex;
+  justify-self: start;
   align-items: center;
   flex-direction: column;
 `;
@@ -163,6 +165,7 @@ const ScheduleTitleWrapper = styled.div`
 const BoldScheduleTitle = styled.p`
   color: #240d57;
   font-size: 1.3rem;
+  font-weight: bold;
   align-self: flex-start;
 `;
 
