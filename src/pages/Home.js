@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "../components/Card";
+import LandingInfo from "../components/LandingInfo";
 
 const Home = () => {
   return (
@@ -8,7 +9,9 @@ const Home = () => {
       <Left>
         <Card />
       </Left>
-      <Right>Right</Right>
+      <Right>
+        <LandingInfo />
+      </Right>
     </Container>
   );
 };
@@ -21,17 +24,15 @@ const Container = styled.main`
   display: flex;
   background-color: #f6f2ff;
   align-items: center;
-  padding: 3.75rem 6.25rem;
+
   box-sizing: border-box;
 `;
 
 const Left = styled.section`
   flex: 1;
   display: flex;
-  ${
-    "" /* align-items: center;
-  justify-content: center; */
-  }
+  align-items: center;
+  justify-content: center;
 `;
 
 const Right = styled.section`
