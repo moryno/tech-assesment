@@ -14,11 +14,11 @@ const Create = () => {
           <Input placeholder="End time/date" type="end" />
           <Input placeholder="Location" type="location" />
           <Input placeholder="Event photo" type="photo" />
-          <Button position="left">Create</Button>
+          <Button>Create</Button>
         </Form>
-        <Button position="right">
+        <NextButton>
           <Link to="/event"> Next </Link>
-        </Button>
+        </NextButton>
       </Wrapper>
     </Container>
   );
@@ -68,6 +68,18 @@ const Button = styled.button`
   background-image: linear-gradient(to right, #8456ec, #e87bf8);
   width: 40%;
 
+  padding: 15px 20px;
+  cursor: pointer;
+  border: none;
+`;
+const NextButton = styled.button`
+  color: #fff;
+
+  background-image: linear-gradient(to right, #8456ec, #e87bf8);
+  width: 40%;
+  position: absolute;
+  width: 25%;
+  margin-top: 2rem;
   padding: 15px 20px;
   cursor: pointer;
   border: none;
