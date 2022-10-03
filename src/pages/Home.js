@@ -27,6 +27,11 @@ const Container = styled.main`
 
 const Left = styled.section`
   flex: 1;
+  display: flex;
+  ${
+    "" /* align-items: center;
+  justify-content: center; */
+  }
 `;
 
 const Right = styled.section`
