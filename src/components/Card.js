@@ -1,9 +1,4 @@
-import {
-  ArrowRight,
-  ArrowRightAltTwoTone,
-  ArrowRightSharp,
-  CalendarToday,
-} from "@material-ui/icons";
+import { ArrowRightSharp, CalendarToday } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 
@@ -168,7 +163,7 @@ const ScheduleTitleWrapper = styled.div`
 const BoldScheduleTitle = styled.p`
   color: #240d57;
   font-size: 1.3rem;
-  align-self: left;
+  align-self: flex-start;
 `;
 
 const ScheduleTitle = styled.span`

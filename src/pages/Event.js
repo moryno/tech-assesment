@@ -1,49 +1,82 @@
-import { ArrowRightSharp, CalendarViewDay } from "@material-ui/icons";
+import {
+  ArrowRightSharp,
+  CalendarToday,
+  CalendarViewDay,
+} from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 
 const Event = () => {
   return (
     <Container>
-      <Left>
-        <Title>Birthday Bash</Title>
-        <Host>Hosted by ELysia</Host>
-        <ScheduleContainer>
-          <IconWrapper>
-            <CalendarViewDay />
-          </IconWrapper>
-          <ScheduleTitleWrapper>
-            <BoldScheduleTitle>18 August 6:00Pm</BoldScheduleTitle>
-            <ScheduleTitle>
-              to <Span>19 August 1:00PM</Span> UTC +10
-            </ScheduleTitle>
-          </ScheduleTitleWrapper>
-          <ArrowRightSharp />
-        </ScheduleContainer>
-      </Left>
-      <Right>
-        <ImageContainer>
-          <Image
-            src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            alt="eventImg"
-          />
-        </ImageContainer>
-      </Right>
+      <Wrapper>
+        <Left>
+          <Title>Birthday Bash</Title>
+          <Host>Hosted by ELysia</Host>
+          <ScheduleContainer>
+            <IconWrapper>
+              <CalendarToday />
+            </IconWrapper>
+            <ScheduleTitleWrapper>
+              <BoldScheduleTitle>18 August 6:00Pm</BoldScheduleTitle>
+              <ScheduleTitle>
+                to <Span>19 August 1:00PM</Span> UTC +10
+              </ScheduleTitle>
+            </ScheduleTitleWrapper>
+            <ArrowRightSharp />
+          </ScheduleContainer>
+          <ScheduleContainer>
+            <IconWrapper>
+              <CalendarToday />
+            </IconWrapper>
+            <ScheduleTitleWrapper>
+              <BoldScheduleTitle>18 August 6:00Pm</BoldScheduleTitle>
+              <ScheduleTitle>
+                to <Span>19 August 1:00PM</Span> UTC +10
+              </ScheduleTitle>
+            </ScheduleTitleWrapper>
+            <ArrowRightSharp />
+          </ScheduleContainer>
+        </Left>
+        <Right>
+          <ImageContainer>
+            <Image
+              src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="eventImg"
+            />
+          </ImageContainer>
+        </Right>
+      </Wrapper>
     </Container>
   );
 };
 
 export default Event;
 
-const Container = styled.main``;
+const Container = styled.main`
+  width: 100vw;
+  height: 100vh;
+  background-color: #f6f2ff;
+  padding: 60px 100px;
+  box-sizing: border-box;
+`;
 
-const Left = styled.section``;
+const Wrapper = styled.section`
+  display: flex;
+`;
 
-const Right = styled.section``;
+const Left = styled.section`
+  flex: 1;
+`;
+
+const Right = styled.section`
+  flex: 1;
+  height: 100%;
+`;
 
 const ImageContainer = styled.section`
   width: 100%;
-  height: 30vh;
+  height: 100%;
   display: flex;
   align-item: center;
   justify-content: center;
@@ -52,34 +85,30 @@ const ImageContainer = styled.section`
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 60vh;
   object-fit: cover;
-  border-top-right-radius: 2.21875rem;
-  border-top-left-radius: 2.21875rem;
-`;
-
-const InfoContainer = styled.section`
-  padding: 1rem;
 `;
 
 const Title = styled.h1`
   color: #240d57;
-  font-size: 2rem;
+  font-size: 3rem;
 `;
 
 const Host = styled.span`
   color: #828282;
   font-weight: 500;
+  font-size: 1.2rem;
 `;
 
 const ScheduleContainer = styled.article`
-  width: 100%;
-
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
   margin-bottom: 1rem;
+  margin-top: 2rem;
 `;
 
 const IconWrapper = styled.div`
@@ -102,7 +131,7 @@ const ScheduleTitleWrapper = styled.div`
 const BoldScheduleTitle = styled.p`
   color: #240d57;
   font-size: 1.3rem;
-  align-self: left;
+  align-self: flex-start;
 `;
 
 const ScheduleTitle = styled.span`
