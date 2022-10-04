@@ -78,6 +78,6 @@ const Button = styled.button`
   ${mobile({
     alignSelf: "center",
     position: "absolute",
-    bottom: "15%",
+    bottom: "5%",
   })};
 `;
