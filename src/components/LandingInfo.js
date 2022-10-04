@@ -48,7 +48,7 @@ const Title = styled.h1`
     margin-bottom: 1.5rem;
     ${mobile({ marginBottom: "1rem" })};
   }
-  ${mobile({ fontSize: "2.5rem", alignSelf: "center" })};
+  ${mobile({ fontSize: "2.5rem", alignSelf: "center", lineHeight: "1" })};
 `;
 
 const TitleGradient = styled.h1`
@@ -59,7 +59,7 @@ const TitleGradient = styled.h1`
   background: -webkit-linear-gradient(#8456ec, #e87bf8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  ${mobile({ fontSize: "2.5rem", alignSelf: "center" })};
+  ${mobile({ fontSize: "2.5rem", alignSelf: "center", lineHeight: "1" })};
 `;
 
 const Description = styled.p`
@@ -67,7 +67,7 @@ const Description = styled.p`
   color: #828282;
   font-size: 1.5rem;
   line-height: 1.5;
-  ${mobile({ alignSelf: "center" })};
+  ${mobile({ alignSelf: "center", lineHeight: "1" })};
 `;
 
 const Button = styled.button`
@@ -84,6 +84,6 @@ const Button = styled.button`
   ${mobile({
     alignSelf: "center",
     position: "absolute",
-    bottom: "5%",
+    bottom: "3%",
   })};
 `;

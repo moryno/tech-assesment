@@ -70,7 +70,7 @@ const Container = styled.main`
     width: "60%",
     borderRadius: "0.7rem",
     position: "absolute",
-    top: "25%",
+    top: "28%",
   })};
 `;
 
