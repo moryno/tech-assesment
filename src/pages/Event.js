@@ -52,7 +52,7 @@ const Container = styled.main`
   width: 100%;
   height: 100vh;
   background-color: #f6f2ff;
-  padding: 60px 100px;
+  padding: 100px 200px;
   box-sizing: border-box;
   ${mobile({ width: "100vw", height: "100vh", padding: "0rem" })};
 `;

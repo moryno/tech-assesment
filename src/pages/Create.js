@@ -61,9 +61,11 @@ const Create = () => {
           />
           <Button>Create</Button>
         </Form>
-        <NextButton>
-          <Link to="/event"> Next </Link>
-        </NextButton>
+
+        <Link to="/event">
+          {" "}
+          <NextButton>Next</NextButton>{" "}
+        </Link>
       </Wrapper>
     </Container>
   );

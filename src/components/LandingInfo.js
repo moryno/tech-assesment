@@ -39,8 +39,10 @@ const Wrapper = styled.article`
 `;
 
 const Title = styled.h1`
-  font-size: 5rem;
+  font-size: 6rem;
   color: #240d57;
+  letter-spacing: 3px;
+  line-height: 1.5;
   align-self: flex-end;
   &:last-child {
     margin-bottom: 1.5rem;
@@ -50,7 +52,9 @@ const Title = styled.h1`
 `;
 
 const TitleGradient = styled.h1`
-  font-size: 5rem;
+  font-size: 6rem;
+  letter-spacing: 3px;
+  line-height: 1.5;
   align-self: flex-end;
   background: -webkit-linear-gradient(#8456ec, #e87bf8);
   -webkit-background-clip: text;
@@ -61,6 +65,7 @@ const TitleGradient = styled.h1`
 const Description = styled.p`
   align-self: flex-end;
   color: #828282;
+  font-size: 1.5rem;
   line-height: 1.5;
   ${mobile({ alignSelf: "center" })};
 `;
@@ -68,10 +73,11 @@ const Description = styled.p`
 const Button = styled.button`
   border: none;
   border-radius: 0.5rem;
-  padding: 0.7rem 2rem;
+  padding: 1.1rem 2rem;
   color: #fff;
   align-self: flex-end;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
+  font-weight: 600;
   background-image: linear-gradient(to right, #8456ec, #e87bf8);
   margin-top: 2rem;
   cursor: pointer;

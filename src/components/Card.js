@@ -61,7 +61,7 @@ const Card = () => {
 export default Card;
 
 const Container = styled.main`
-  width: 80%;
+  width: 30vw;
   background-color: #f6f2ff;
   border: none;
   border-radius: 2.21875rem;
@@ -133,7 +133,8 @@ const ResponseContainer = styled.article`
 
 const Responses = styled.span`
   color: #240d57;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
   margin-right: 0.5rem;
   ${mobile({ fontSize: "1rem", marginRight: "0" })};
 `;
@@ -148,6 +149,8 @@ const Dot = styled.div`
 
 const Guests = styled.span`
   color: #501fc1;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
   margin-right: 3.5rem;
   ${mobile({ marginRight: "0" })};
 `;
